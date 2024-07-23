@@ -1,0 +1,67 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 70%;
+    /* padding: 10px; */
+    margin: auto;
+  }
+
+#contentContainer {
+text-align: center;
+margin: 20px;
+padding: 2px;
+}
+
+.Leaderboardtext {
+  color: yellow;
+}
+
+.userNames {
+  color: white;
+}
+
+  td,
+  th {
+    border: 2px solid white;
+    color: yellow;
+    text-align: center;
+    padding: 18px;
+  }
+
+  tr:nth-child(even) {
+    background-color: #2b7a78;
+    color: white;
+  }
+
+  
+  .myLeaderboardResults {
+    background-color: yellow;
+    text-align: center;
+    border-top: 4px solid yellow;
+    color: white;
+  }
+
+  .userRanks {
+    color: white;
+    width: 4%;
+  }
+
+  .userWRration {
+    /* width: 8% */
+    text-align: center;
+    color: white;
+  }
+
+  .userRankPoints {
+    /* width: 15%; */
+    text-align: center;
+    color: white;
+  }
+
+  .userlink{
+    color: yellow;
+  }
+
+  .userlink:hover{
+    color: #ffffff;
+  }

@@ -1,0 +1,38 @@
+#profileName {
+    text-align: center;
+    color: white;
+    text-transform: capitalize;
+}
+
+#rosterTitle {
+    color: white;
+    margin-left: 2.5rem;
+}
+
+#profileDescription {
+    text-align: center;
+    color: white;
+    font-size: 18px;
+}
+
+#rosterList {
+    display: flex;
+    grid-gap: 2rem;
+    list-style-type: none;
+}
+
+.rosterItem {
+    float: left;
+    text-decoration: none;
+}
+
+.rosterItemImage {
+    width: 128px;
+    height: 128px;
+    image-rendering: pixelated;
+}
+
+.rosterItemTitle {
+    color: yellow;
+    text-transform: capitalize;
+}

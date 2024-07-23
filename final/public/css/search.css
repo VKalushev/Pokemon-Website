@@ -1,0 +1,131 @@
+#searchResultsContainer {
+  width: 60%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  grid-gap: 0.5rem;
+}
+
+#searchResultsTitle {
+  text-align: center;
+  text-transform: capitalize;
+  color: yellow;
+}
+
+.searchResultItem {
+  padding: 10px;
+  width: 200px;
+  margin: auto;
+}
+
+.searchResultItem:hover {
+  background-color: #1a4745;
+}
+
+@media only screen and (max-width: 600px) {
+  #searchResultsContainer {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+  }
+
+  .searchResultItem {
+    width: 200px;
+    height: auto;
+    margin: auto;
+  }
+}
+
+.searchResultTitle {
+  text-transform: capitalize;
+  color: yellow;
+}
+
+.searchResultImage {
+  min-width: 50px;
+  width: 200px;
+  image-rendering: pixelated;
+  height: auto;
+  margin: auto;
+}
+
+#paginationContainer {
+  position: fixed;
+  bottom: 12%;
+  left: 44%;
+  width: 14rem;
+  margin: auto;
+}
+
+.paginationBtn {
+  padding: 10px;
+  background-color: #2b7a76;
+  border: 1px solid #134b48;
+  color: yellow;
+}
+
+.paginationBtn:hover {
+  background-color: #1a4745;
+  border: 1px solid #3aafa9;
+  color: yellow;
+}
+
+@media screen and (max-width: 600px) {
+  #paginationContainer {
+    padding-bottom: 50px;
+    margin-top: 2rem;
+    position: relative;
+    left: 0%;
+    width: 14rem;
+    margin: auto;
+  }
+}
+
+#searchContainer {
+  margin-left: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+
+
+#searchContainer:hover .searchHistoryList {
+  display: block;
+}
+
+.searchHistoryList {
+  border: 0.1rem solid yellow;
+  padding: 1rem;
+  width: 100%;
+  list-style-type: none;
+  padding: 0rem;
+  font-size: 18px;
+  position: absolute;
+  display: none;
+  z-index: 1;
+  color: yellow;
+  background-color: #3aafa9;
+  margin: auto;
+  
+    
+  
+}
+
+.searchHistoryItem:hover{
+  background-color: #134b48;
+}
+
+.searchHistoryItem {
+  
+  border: none;
+  padding-bottom: 1rem;
+  background-color: #3aafa9;
+  color: yellow;
+}
+
+.searchHistoryItem a {
+  margin-left: 1rem;
+    text-transform: capitalize;
+    color: yellow;
+    text-decoration: none;
+}

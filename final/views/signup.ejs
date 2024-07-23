@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('templates/head_common'); -%>
+
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/signup.css">
+    <link rel="stylesheet" href="css/search.css">
+
+    <title>PokePrime</title>
+</head>
+<body>
+    <%- include('templates/navbar'); -%>
+
+    <div class="banner" id="banner-left"></div>
+    
+    <div class="main-container">
+        <div class="main wrapper clearfix" id="main-container-inner">
+            <div class="signup-signup">
+                <form action="/signup" method="POST" class="sign-up-form" autocomplete="off">
+                    <h2 class="title2">Sign up</h2>
+
+                    <% if (errors.isUsernameTaken) { %>
+                        <div class="input-field input-error">
+                            <i class="fa fa-user"></i>
+                            <input type="username" name="username" id="username" placeholder="Username" />
+                        </div>
+                        <p>Username is already taken</p>
+                    <% } else { %>
+                        <div class="input-field">
+                            <i class="fa fa-user"></i>
+                            <input type="username" name="username" id="username" placeholder="Username" />
+                        </div>
+                    <% } %>
+    
+                    <% if (errors.arePasswordsEqual) { %>
+                        <div class="input-field">
+                            <i class="fa fa-lock"></i>
+                            <input type="password" name="password" id="password" placeholder="Password" />
+                        </div>
+
+                        <div class="input-field">
+                            <i class="fa fa-lock"></i>
+                            <input type="password" name ="passwordCheck" id="passwordCheck" placeholder="Type Password Again" />
+                        </div>
+                    <% } else { %>
+                        <div class="input-field input-error">
+                            <i class="fa fa-lock"></i>
+                            <input type="password" name="password" id="password" placeholder="Password" />
+                        </div>
+
+                        <div class="input-field input-error">
+                            <i class="fa fa-lock"></i>
+                            <input type="password" name ="passwordCheck" id="passwordCheck" placeholder="Type Password Again" />
+                        </div>
+
+                        <p>Passwords don't match</p>
+                    <% } %>
+
+                    
+                    <input type="submit" class="btn solid" value="Sign Up">
+                </form>
+            
+                 <a class="smalltext" href="/signin">If you have created an account - (Click Here to Sign in!)</a> 
+    
+                <div class="QandA">
+                    <h3> <U> Q & A </U> </h3>
+                    <p> <U>What is the benefit of Signing Up?</U></p>
+                    <P>You will discover more about the world of Pokemon, and be a part of a community!</P>
+                    <P><U>Is it Free to Sign up?</U></P>
+                    <p>Absolutely! You can Sign up for free and enjoy our content.</p>
+                </div>
+
+            </div>
+    
+            </div>
+        </div> <!-- #main -->
+    
+    </div> <!-- #main-container -->
+    
+    <div class="banner" id="banner-right"></div>
+
+    <%- include('templates/footer'); -%>
+
+    <!-- JavaScript scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+        window.jQuery ||
+        document.write(
+            '<script src="js/vendor/jquery-1.11.2.min.js"><\/script>'
+        );
+    </script>
+
+    <script src="js/pokemon.js"></script>
+    <script src="js/searchBar.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

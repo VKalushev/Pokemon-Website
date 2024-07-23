@@ -1,0 +1,154 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Sign In</title>
+
+    <link rel="stylesheet" href="css/normalize.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/signin.css" />
+    <link rel="stylesheet" href="css/search.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap"
+      rel="stylesheet"
+    />
+    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+
+  <body class="main">
+    <div class="header-container">
+      <header class="wrapper clearfix">
+        <nav>
+          <ul id="navList">
+            <li>
+              <p><a id="title" href="index.html">PokePrime</a></p>
+            </li>
+
+            <li>
+              <div id="navSearch">
+                <div id="searchContainer">
+                  <input
+                    type="text"
+                    name="searchTerm"
+                    id="searchInput"
+                    placeholder="Search"
+                  />
+                  <button id="searchButton">Go</button>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <a href="Signup.html" id="signupLink">Sign up</a>
+            </li>
+            <li>
+              <a href="Signin.html" id="signinLink">Sign in</a>
+            </li>
+          </ul>
+          <ul id="mobileMenu"></ul>
+        </nav>
+      </header>
+    </div>
+
+    <div class="banner" id="banner-left"></div>
+
+    <div class="main-container">
+      <div class="main wrapper clearfix" id="main-container-inner">
+        <div class="logincontainer">
+          <div class="signin-signup"></div>
+          <form action="#" class="signinform">
+            <h2 class="title2">Sign In</h2>
+            <div class="input-field">
+              <i class="fa fa-user"></i>
+              <input type="Username" placeholder="Username" />
+            </div>
+
+            <div class="input-field">
+              <i class="fa fa-lock"></i>
+              <input type="Password" placeholder="Password" />
+            </div>
+            <input type="submit" class="btn solid" value="Login" />
+          </form>
+
+          <div class="Signup2">
+            <h3>
+              <a href="Signup.html">
+                If you don't have an account - (Click here to Sign up!)
+              </a>
+            </h3>
+          </div>
+
+          <div class="TopPokemon">
+            <p>
+              Want To Find Out More About Your Favourite Pokemon? Visit Our Main
+              Page And Search In The Search Bar!
+            </p>
+          </div>
+
+          <div class="Contactussection">
+            <p>Contact Us</p>
+            <p>
+              Questions, bug reports, feedback, feature requests - we're here
+              for it all.
+              <br />
+              Already use PokePrime? Sign In so we can tailor your support
+              experience, if that's not possible, we'd still like to hear from
+              you.
+            </p>
+          </div>
+
+          <div class="Contactusform">
+            <form action="action_page">
+              <label for="email-address">Your Email Address</label>
+              <input
+                type="text"
+                id="email"
+                name="email-address"
+                placeholder="Email Address"
+              />
+              <textarea placeholder="Message"></textarea>
+              <input type="submit" value="Submit" />
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- #main -->
+    </div>
+    <!-- #main-container -->
+
+    <div class="banner" id="banner-right"></div>
+
+    <!-- #new footer  -->
+    <div class="footer-container">
+      <footer class="footer">
+        <div class="footer-content">
+          <p>Specialising in all your pokemon needs</p>
+          <a href="www.facebook.com" class="socials"
+            ><i class="fa fa-facebook"></i
+          ></a>
+          <a href="#" class="socials"><i class="fa fa-twitter"></i></a>
+          <a href="#" class="socials"><i class="fa fa-google-plus"></i></a>
+          <a href="#" class="socials"><i class="fa fa-youtube"></i></a>
+          <a href="#" class="socials"><i class="fa fa-linkedin-square"></i></a>
+          <p>&copy;2021 designed by <span>DNWebPirates</span></p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+      window.jQuery ||
+        document.write(
+          '<script src="js/vendor/jquery-1.11.2.min.js"><\/script>'
+        );
+    </script>
+    <script src="js/pokemon.js"></script>
+    <script src="js/searchBar.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/pokemonScroll.js"></script>
+  </body>
+</html>

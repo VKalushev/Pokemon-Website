@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('templates/head_common'); -%>
+    <link rel="stylesheet" href="css/normalize.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/search.css" />
+    <link rel="stylesheet" href="css/battle.css" />
+    <title>PokePrime - Battle</title>
+  </head>
+  <body>
+    <%- include('templates/navbar'); -%>
+
+    <div class="banner" id="banner-left"></div>
+
+    <div class="main-container">
+      <div class="main wrapper clearfix" id="contentContainer">
+        <h1 id="title">Battle</h1>
+      </div>
+      <form action="/battle" method="POST" autocomplete="off">
+      <div><button id="battleButton" type="submit">Random Opponent</button></div>
+      <table> 
+        <tr>
+          <!-- 3 different coloumns for the user, results and the opponent -->
+          <th class = "userRanks"><%= user.username%></th>
+          <th class = "userNames">Results</th>
+          <% if(opponentScoreResults !== null){ %>
+                <th class = "userWRration"><%= opponentScoreResults.username %></th>
+            <% } else { %>
+                <th class = "userWRration">Opponent</th>
+            <% } %> 
+        </tr>
+        <tr> 
+          <!-- Getting the img for the user roster and opponent roster -->
+            <% if (userRoster != null) { %>
+                <% for (let i=0; i < 5; i++) { %>
+                    <% if (userRoster[i].slotNum !== undefined) { %>
+                        <th class = "userRanks"><img src=<%= userRoster[i].imgSrc %> alt="Roster Slot Pokemon" class="rosterItemImage"></th>
+                        <% break; %>
+                     <% } else if( i === 4){%>
+                      <th><img src="/img/placeholder.webp" alt="Roster Slot Pokemon" width="128" height="128" class="rosterItemImage"></th>
+                     <% } %>
+                <% } %>
+              <% } else {%>
+                <th><img src="/img/placeholder.webp" alt="Roster Slot Pokemon" width="128" height="128" class="rosterItemImage"></th>
+              <% } %>
+            
+            <th class = "userNames">VS</th>
+          
+            <!-- Getting the whole roster and the pokemons imgs  -->
+          <% if (opponentRoster != null) { %>
+            <% for (let i=0; i < 5; i++) { %>
+                <% if (opponentRoster[i].slotNum !== undefined) { %>
+                    <th class = "userWRration"><img src=<%= opponentRoster[i].imgSrc %> alt="Roster Slot Pokemon" class="rosterItemImage"></th>
+                    <% break; %>
+                 <% } %>
+            <% } %>
+          <% } else {%>
+            <th><img src="/img/placeholder.webp" alt="Roster Slot Pokemon" width="128" height="128" class="rosterItemImage"></th>
+          <% } %>
+          
+        </tr>
+        <tr>
+          <th class = "userRanks">
+              <% for (let i=0; i < 5; i++) { %>
+                  <% if (userRoster[i].slotNum !== undefined) { %>
+                          <img src=<%= userRoster[i].imgSrc %> alt="Roster Slot Pokemon" width="64" height="64" >
+                  <% } else { %>
+                          <img src="/img/placeholder.webp" alt="Roster Slot Pokemon" width="64" height="64">
+                  <% } %>
+              <% } %>
+          </th>
+          <% if(opponentScoreResults !== null){ %>
+            <th class = "userNames"><%= userWinRatio.toFixed(2) %>% VS <%= opponentRatio.toFixed(2) %>%</th>
+            <% } else { %>
+            <th class = "userNames"></th>
+            <% } %> 
+          <th class = "userWRration">
+              <% for (let i=0; i < 5; i++) { %>
+                <% if (opponentRoster != null) { %>
+                    <% if (opponentRoster[i].slotNum !== undefined) { %>
+                        
+                        <img src=<%= opponentRoster[i].imgSrc %> alt="Roster Slot Pokemon" width="64" height="64" >
+                    <% } else { %>
+                        <img src="/img/placeholder.webp" alt="Roster Slot Pokemon" width="64" height="64">
+                    <% } %>
+                    <% } else {%>
+                        <img src="/img/placeholder.webp" alt="Roster Slot Pokemon" width="64" height="64" >
+                <% } %>
+            
+              
+          <% } %>
+          </th>
+        </tr>
+          <!-- Getting the leaderboard information for both users -->
+        <tr>
+          <th class = "userRanks">
+            <table class = "insideTable">
+              <tr>
+                <th class = "insideTR">Wins</th>
+                <th class = "insideTR">Loses</th>
+                <th class = "insideTR">Rank points</th>
+              </tr>
+              <tr>
+                <th class = "insideTR"><%= usercScoreResults.wins %></th>
+                <th class = "insideTR"><%= usercScoreResults.loses %></th>
+                <th class = "insideTR"><%= usercScoreResults.rankpoints %></th>
+              </tr>
+            </table>
+          </th>
+          <% if(opponentScoreResults !== null){ %>
+            <% if(winner === user.username){ %>
+                <th class = "userNames">You WON</th>
+            <% } else { %>
+                <th class = "userNames">You LOST </th>
+            <% } %> 
+            
+            <% } else { %>
+            <th class = "userNames"></th>
+            <% } %> 
+          <th class = "userWRration">
+            <table class = "insideTable">
+              <tr>
+                <th class = "insideTR">Wins</th>
+                <th class = "insideTR">Loses</th>
+                <th class = "insideTR">Rank points</th>
+              </tr>
+              <tr>
+                  <% if(opponentScoreResults !== null) {%> 
+                      <th class = "insideTR"><%= opponentScoreResults.wins %></th>
+                      <th class = "insideTR"><%= opponentScoreResults.loses %></th>
+                      <th class = "insideTR"><%= opponentScoreResults.rankpoints %></th>
+                  <%} else { %>
+                      <th class = "insideTR">-</th>
+                      <th class = "insideTR">-</th>
+                      <th class = "insideTR">-</th>
+                  <% } %>
+              </tr>
+            </table>
+          </th>
+        </tr>
+
+      </table>
+    </form>
+    </div>
+
+    <div class="banner" id="banner-right"></div>
+
+    <%- include('templates/footer'); -%>
+
+    <!-- JavaScript scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+      window.jQuery ||
+        document.write(
+          '<script src="js/vendor/jquery-1.11.2.min.js"><\/script>'
+        );
+    </script>
+
+    <script src="js/pokemon.js"></script>
+    <script src="js/searchBar.js"></script>
+    <script src="js/pokemonClass.js"></script>
+    <script src="js/battle.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

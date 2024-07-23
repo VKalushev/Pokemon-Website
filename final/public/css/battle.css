@@ -1,0 +1,68 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 80%;
+    /* padding: 10px; */
+    /* margin: auto; */
+    margin-top: 3%;
+    margin-left: 10%;
+  }
+
+  td,
+  th {
+    color:white;
+    border: 1px solid yellow;
+    text-align: left;
+    padding: 8px;
+    background-color: #2b7a78;
+    width: 33%;
+    text-align: center;
+  }
+
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+#title{
+    font-size: 2.2rem;
+  color: yellow;
+  text-align: center;
+  line-height: 55px;
+  color: yellow;
+}
+
+#battleButton{
+    margin: -50px -50px; 
+    position:relative;
+    top:50%; 
+    left: 48.5%; 
+    width: 150px;
+    height: 50px;
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    background-color: #2b7a78;
+    color: white;
+    font-weight: 300;
+    transition: all 0.2s;
+  
+}
+#battleButton:hover {
+  background-color: #104d4a;
+}
+
+.rosterItemImage {
+  width: 256px;
+  height: 256px;
+  image-rendering: pixelated;
+   background-color: #104d4a;
+}
+
+.insideTable {
+  width:auto;
+  margin-left: -2%;
+}
+
+.insideTR {
+  border: none;
+}

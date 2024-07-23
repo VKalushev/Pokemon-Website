@@ -1,0 +1,168 @@
+#contentContainer {
+  width: 80%;
+  margin: auto;
+}
+
+#pokemonHeader,
+#pokemonMain {
+  display: flex;
+  flex-direction: row;
+  color: white;
+}
+
+#pokemonDescription {
+  width: 500px;
+}
+
+@media screen and (max-width: 1500px) {
+  #pokemonMain {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding-bottom: 2rem;
+  }
+
+  #pokemonDescription {
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #pokemonHeader {
+    flex-direction: column;
+  }
+
+  #pokemonDescription {
+    width: 80%;
+  }
+}
+
+#pokemonMain {
+  grid-gap: 5rem;
+}
+
+#pokemonMainImage {
+  image-rendering: pixelated;
+}
+
+#pokemonNameTitle {
+  color: yellow;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.pokemonTypeBtn {
+  text-transform: capitalize;
+  color: black;
+  background-color: yellow;
+  margin-right: 0.5rem;
+}
+
+/* Tab Layout */
+#tabLayout {
+  display: flex;
+  flex-direction: column;
+}
+
+#tabLayoutTabBtns {
+  margin-top: 1.7rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.tabLayoutTabBtnsBtn {
+  margin: 5px;
+  width: 100px;
+  height: 25px;
+  outline: none;
+  border: none;
+  border-radius: 25px;
+  background-color: #2b7a78;
+  color: white;
+  font-weight: 300;
+  transition: all 0.2s;
+}
+
+.tabLayoutTabBtnsBtn:hover {
+  background-color: #1d5250;
+}
+
+.tabLayoutTabBtnsBtnCurrent {
+  background-color: #1c2e3f;
+}
+
+.tabPaginationButton:hover {
+  padding: 5px;
+  background-color: #194b48;
+  border: 1px solid #134b48;
+  color: yellow;
+}
+
+.tabPaginationButton {
+  margin: 5px;
+  padding: 5px;
+  background-color: #2b7a76;
+  border: 1px solid #134b48;
+  color: yellow;
+}
+
+.tabPaginationButton:hover {
+  background-color: #1a4745;
+  border: 1px solid #3aafa9;
+  color: yellow;
+}
+
+.currentTabPaginationButton {
+  background-color: #1a4745;
+}
+
+.moveItem {
+  text-transform: capitalize;
+}
+
+#pokemonRandomBtn, #pokemonAddToListBtn {
+  color: white;
+  background-color: #2b7a78;
+  border: 1px solid #5785b1;
+}
+
+#selectRosterSlot {
+  color: white;
+  background-color: #2b7a78;
+  border: 1px solid #5785b1;
+}
+
+#selectRosterSlot option {
+  color: white;
+  background-color: #2b7a78;
+}
+
+#pokemonRandomBtn:hover, #pokemonAddToListBtn:hover {
+  background-color: #1a4745;
+  border: 1px solid #71a9df;
+}
+
+#evolutionContent {
+  display: flex;
+  flex-direction: row;
+}
+
+.pokemonEvolutionName {
+  text-transform: capitalize;
+}
+
+.pokemonEvolutionLinkImg {
+  image-rendering: pixelated;
+}
+
+.evolutionItem {
+  padding: 5px;
+}
+
+.evolutionItem:hover {
+  background-color: #194b48;
+}
+
+#baseStats {
+    width: 150px;
+}

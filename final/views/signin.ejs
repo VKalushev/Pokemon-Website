@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('templates/head_common'); -%>
+
+    <link rel="stylesheet" href="css/normalize.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/signin.css" />
+    <link rel="stylesheet" href="css/search.css" />
+
+    <title>PokePrime</title>
+  </head>
+  <body>
+    <%- include('templates/navbar'); -%>
+
+    <div class="banner" id="banner-left"></div>
+
+    <div class="main-container">
+      <div class="main wrapper clearfix" id="main-container-inner">
+        <div class="logincontainer">
+          <div class="signin-signup"></div>
+
+          <!-- Signin Form -->
+          <form action="/signin" method="POST" class="signinform">
+            <h2 class="title2">Sign In</h2>
+
+            <div class="input-field">
+              <i class="fa fa-user"></i>
+              <input type="Username" placeholder="Username" name="username" />
+            </div>
+
+            <div class="input-field">
+              <i class="fa fa-lock"></i>
+              <input type="Password" placeholder="Password" name="password" />
+            </div>
+
+            <input type="submit" class="btn solid" value="Login" />
+
+            <% if (errors.isUsernameIncorrect == true ||
+            errors.isPasswordIncorrect == true) { %>
+            <p id="errorlogin">Login details are incorrect</p>
+            <% } %>
+          </form>
+
+          <div>
+            <a href="/signup" class="Signup2">
+              If you don't have an account - (Click here to Sign up!)
+            </a>
+          </div>
+
+          <!-- #main -->
+        </div>
+        <!-- #main-container -->
+      </div>
+    </div>
+    <div class="banner" id="banner-right"></div>
+
+    <%- include('templates/footer'); -%>
+
+    <!-- JavaScript scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+      window.jQuery ||
+        document.write(
+          '<script src="js/vendor/jquery-1.11.2.min.js"><\/script>'
+        );
+    </script>
+
+    <script src="js/pokemon.js"></script>
+    <script src="js/searchBar.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

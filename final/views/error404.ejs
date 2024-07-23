@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('templates/head_common'); -%>
+    <link rel="stylesheet" href="css/normalize.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/search.css" />
+    <link rel="stylesheet" href="css/errorerror.css" />
+
+    <title>PokePrime - 404 Ditto not found</title>
+  </head>
+  <body>
+    <%- include('templates/navbar'); -%>
+
+    <div class="banner" id="banner-left"></div>
+
+    <div class="main-container">
+      <div class="main wrapper clearfix" id="contentContainer">
+        <div class="errorcontainer">
+          <h1 id="erorheading">404 Ditto not found</h1>
+          <img id="errorimage" src="/img/404error.jpg" alt="ditto error" />
+          <br />
+          <a id="errordesc">The page was not found</a>
+        </div>
+      </div>
+    </div>
+</div>    
+    <div class="banner" id="banner-right"></div>
+
+    <%- include('templates/footer'); -%>
+
+    <!-- JavaScript scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+      window.jQuery ||
+        document.write(
+          '<script src="js/vendor/jquery-1.11.2.min.js"><\/script>'
+        );
+    </script>
+    <script src="js/pokemon.js"></script>
+    <script src="js/searchBar.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

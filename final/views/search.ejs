@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('templates/head_common'); -%>
+
+    <link rel="stylesheet" type="text/css" href="css/normalize.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/pokemonScroll.css" />
+    <link rel="stylesheet" type="text/css" href="css/search.css" />
+
+    <title>PokePrime</title>
+</head>
+<body>
+    <%- include('templates/navbar'); -%>
+
+    <div class="banner" id="banner-left"></div>
+
+    <div class="main-container">
+        <div class="main wrapper clearfix" id="mainContent">
+            <h1 class="searchResultsTitle" id="searchResultsTitle">
+                Search Results
+            </h1>
+
+            <div id="searchResultsContainer"></div>
+
+            <div id="paginationContainer">
+                <button class="paginationBtn" id="previousBtn">Prev</button>
+                <button class="paginationBtn" id="firstNumBtn">1</button>
+                <button class="paginationBtn" id="secondNumBtn">2</button>
+                <button class="paginationBtn" id="thirdNumBtn">3</button>
+                <button class="paginationBtn" id="nextBtn">Next</button>
+            </div>
+        </div>
+        <!-- #main -->
+    </div>
+    <!-- #main-container -->
+
+    <div class="banner" id="banner-right"></div>
+
+    <%- include('templates/footer'); -%>
+
+    <!-- JavaScript scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+        window.jQuery ||
+        document.write(
+            '<script src="js/vendor/jquery-1.11.2.min.js"><\/script>'
+        );
+    </script>
+    <script src="js/pokemon.js"></script>
+    <script src="js/searchBar.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

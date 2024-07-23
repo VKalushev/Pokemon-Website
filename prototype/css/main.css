@@ -1,0 +1,481 @@
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: "PT Serif", serif;
+}
+
+body {
+  opacity: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#searchInput::placeholder {
+  color: yellow;
+}
+
+@media screen and (min-width: 1201px) {
+  .banner {
+    display: inline;
+    width: 15%;
+  }
+
+  .main-container {
+    width: 70%;
+    height: 40rem;
+    background-color: #3aafa9;
+    overflow-y: auto;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .banner {
+    display: none;
+  }
+
+  .main-container {
+    width: 100%;
+    background-color: #3aafa9;
+    overflow-y: auto;
+  }
+}
+
+/* Nav bar position */
+#mobileMenu {
+  display: none;
+}
+
+@media screen and (min-width: 1300px) {
+  nav {
+    display: flex;
+    width: 100vw;
+  }
+
+  #navProfile {
+    float: right;
+    margin-right: 2.5rem;
+    margin-top: 1.5rem;
+    background-color: #b469c9;
+    border: none;
+  }
+
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    color: white;
+    width: 100%;
+    list-style-type: none;
+    float: left;
+    background-color: #2b7a76;
+    margin: 0;
+    height: 5rem;
+    padding: 0;
+  }
+
+  /* Signin / Signup */
+  #signinLink {
+    margin-top: -2rem;
+    margin-right: 15rem;
+    font-size: 21px;
+    float: right;
+    color: yellow;
+    text-decoration: none;
+  }
+
+  #signupLink {
+    margin-top: -2rem;
+    margin-right: 5rem;
+    font-size: 21px;
+    float: right;
+    color: yellow;
+    text-decoration: none;
+  }
+
+  #navSearch {
+    padding-left: 2.5rem;
+    margin-top: 1.5rem;
+    margin-left: 30%;
+  }
+
+  #searchInput {
+    background-color: #3aafa9;
+    color: yellow;
+    border: 0.5px solid yellow;
+    width: 30rem;
+    height: 2rem;
+    font-size: 20px;
+    padding-left: 1.5rem;
+    border-radius: 2rem;
+  }
+
+  #searchButton {
+    background-color: #3aafa9;
+    color: yellow;
+    border: 0.5px solid yellow;
+    height: 2rem;
+    width: 4rem;
+    border-radius: 2rem;
+  }
+
+  #searchInputMobile,
+  #searchButtonMobile {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1150px) and (max-width: 1300px) {
+  nav {
+    display: flex;
+    width: 100vw;
+  }
+
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    color: white;
+    width: 100%;
+    list-style-type: none;
+    float: left;
+    background-color: #2b7a76;
+    margin: 0;
+    height: 5rem;
+    padding: 0;
+  }
+
+  /* Signin / Signup */
+  #signinLink {
+    margin-top: -2rem;
+    margin-right: 13rem;
+    font-size: 21px;
+    float: right;
+    color: yellow;
+    text-decoration: none;
+  }
+
+  #signupLink {
+    margin-top: -2rem;
+    margin-right: 4rem;
+    font-size: 21px;
+    float: right;
+    color: yellow;
+    text-decoration: none;
+  }
+
+  #navSearch {
+    padding-left: 1.5rem;
+    margin-top: 1.5rem;
+    margin-left: 25%;
+  }
+
+  #searchInput {
+    background-color: #3aafa9;
+    color: yellow;
+    border: 0.5px solid yellow;
+    width: 25rem;
+    height: 2rem;
+    color: black;
+    font-size: 20px;
+    padding-left: 0.5rem;
+    border-radius: 2rem;
+  }
+
+  #searchButton {
+    background-color: #3aafa9;
+    color: yellow;
+    border: 0.5px solid yellow;
+    height: 2rem;
+    width: 4rem;
+    border-radius: 2rem;
+  }
+
+  #searchInputMobile,
+  #searchButtonMobile {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 950px) and (max-width: 1149px) {
+  nav {
+    display: flex;
+    width: 100vw;
+  }
+
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    color: white;
+    width: 100%;
+    list-style-type: none;
+    float: left;
+    background-color: #2b7a76;
+    margin: 0;
+    height: 5rem;
+    padding: 0;
+  }
+
+  #hamburgerMenuBtn {
+    display: none;
+  }
+
+  /* Signin / Signup */
+  #signinLink {
+    display: inline;
+    margin-top: -2rem;
+    margin-right: 13rem;
+    font-size: 21px;
+    float: right;
+    color: yellow;
+    text-decoration: none;
+  }
+
+  #signupLink {
+    display: inline;
+    margin-top: -2rem;
+    margin-right: 4rem;
+    font-size: 21px;
+    float: right;
+    color: yellow;
+    text-decoration: none;
+  }
+
+  #navSearch {
+    padding-left: 1.5rem;
+    margin-top: 1.5rem;
+    margin-left: 25%;
+    margin-left: 25%;
+  }
+
+  #searchInput {
+    background-color: #3aafa9;
+    color: yellow;
+    border: 0.5px solid yellow;
+    display: inline;
+    width: 20rem;
+    height: 2rem;
+    color: black;
+    font-size: 20px;
+    padding-left: 0.5rem;
+    border-radius: 2rem;
+  }
+
+  #searchButton {
+    background-color: #3aafa9;
+    color: yellow;
+    border: 0.5px solid yellow;
+    height: 2rem;
+    width: 4rem;
+    border-radius: 2rem;
+  }
+
+  #searchInputMobile,
+  #searchButtonMobile {
+    display: none;
+  }
+}
+
+/* Hover elements for searchbar*/
+
+#signupLink:hover {
+  color: rgb(136, 136, 0);
+}
+
+#signinLink:hover {
+  color: rgb(136, 136, 0);
+}
+
+#searchButton:hover {
+  border: #b469c9;
+  color: #2b7a76;
+}
+
+@media screen and (max-width: 949px) {
+  nav {
+    display: flex;
+    width: 100vw;
+  }
+
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    color: white;
+    width: 100%;
+    list-style-type: none;
+    float: left;
+    background-color: #2b7a76;
+    margin: 0;
+    height: 5rem;
+    padding: 0;
+  }
+
+  /* Signin / Signup */
+  #signinLink {
+    display: none;
+    margin-top: 3rem;
+    margin-left: 40%;
+    font-size: 30px;
+    color: yellow;
+    text-decoration: none;
+  }
+
+  #signupLink {
+    display: none;
+    margin-left: 40%;
+    margin-top: 3rem;
+    font-size: 30px;
+    color: yellow;
+    text-decoration: none;
+  }
+
+  #navSearch {
+    display: none;
+  }
+
+  #navSearchMobile {
+    margin-top: 1.5rem;
+    margin-left: 12%;
+  }
+
+  #searchInputMobile {
+    background-color: #3aafa9;
+    color: yellow;
+    border: 0.5px solid yellow;
+    width: 20rem;
+    height: 2rem;
+    color: black;
+    font-size: 20px;
+    padding-left: 0.5rem;
+    border-radius: 2rem;
+  }
+
+  #searchInputMobile::placeholder {
+    color: yellow;
+  }
+
+  #searchButtonMobile {
+    background-color: #3aafa9;
+    border: 0.5px solid yellow;
+    color: yellow;
+    height: 2rem;
+    width: 4rem;
+    border-radius: 2rem;
+  }
+}
+
+/* Title */
+#title {
+  float: left;
+  font-size: 30px;
+  padding-left: 25px;
+  padding-top: 0;
+  font-family: fantasy;
+  color: yellow;
+}
+
+@media screen and (max-width: 949px) {
+  #title {
+    font-size: 28px;
+    padding: 0;
+    margin-left: 40vw;
+    margin-top: -3.5rem;
+    font-family: fantasy;
+    color: yellow;
+  }
+
+  #hamburgerMenuBtn {
+    margin-top: 1rem;
+    background-color: transparent;
+    border: none;
+  }
+
+  .hamburgerMenuIcon {
+    color: yellow;
+  }
+
+  #mobileMenu {
+    display: none;
+    margin-top: 80px;
+    height: 50%;
+    position: absolute;
+    z-index: 1000;
+    background-color: #2b7a76;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 949px) {
+  #navSearchMobile {
+    margin-top: 1.5rem;
+    margin-left: 20%;
+  }
+}
+
+/* New footer tags */
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #2b7a78;
+  width: 100vw;
+  height: 2.5vw;
+  padding-top: 40px;
+  color: yellow;
+}
+
+.footer-content {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  text-align: center;
+}
+
+.footer-content p {
+  max-width: 500px;
+  margin: 10px auto;
+  line-height: 28px;
+  font-size: 14px;
+}
+
+.socials {
+  margin: 0 10px;
+  text-decoration: none;
+  color: yellow;
+}
+
+.socials i {
+  font-size: 1.1rem;
+  transition: color 0.5s ease;
+}
+
+.socials:hover i {
+  color: brown;
+}
+
+@media screen and (max-width: 600px) {
+  .footer {
+    display: none;
+  }
+}
+
+.scrollBarHeading {
+  color: yellow;
+  position: absolute;
+  /* margin-left: 46%; */
+  margin-top: -3px;
+  text-transform: uppercase;
+}
+
+/* Dynamic Banner */
+
+#banner-left,
+#banner-right {
+  background-color: transparent;
+}

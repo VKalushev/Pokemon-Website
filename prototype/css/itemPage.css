@@ -1,0 +1,151 @@
+#contentContainer {
+    width: 80%;
+    margin: auto;
+  }
+  
+  #itemHeader,
+  #itemMain {
+    display: flex;
+    flex-direction: row;
+    color: white;
+  }
+  
+  #itemMain {
+    grid-gap: 5rem;
+  }
+  
+  #itemMainImage {
+    image-rendering: pixelated;
+  }
+  
+  #itemNameTitle {
+    color: yellow;
+    text-align: center;
+    text-transform: capitalize;
+  }
+  
+  .itemTypeBtn {
+    text-transform: capitalize;
+    color: black;
+    background-color: yellow;
+    margin-right: 0.5rem;
+  }
+  
+  /* Tab Layout */
+  #tabLayout {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #tabLayoutTabBtns {
+    margin-top: 1.7rem;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .tabLayoutTabBtnsBtn {
+    margin: 5px;
+    width: 100px;
+    height: 25px;
+    outline: none;
+    border: none;
+    border-radius: 25px;
+    background-color: #2b7a78;
+    color: white;
+    font-weight: 300;
+    transition: all 0.2s;
+  }
+  
+  .tabLayoutTabBtnsBtn:hover {
+    background-color: #1d5250;
+  }
+  
+  .tabLayoutTabBtnsBtnCurrent {
+    background-color: #1c2e3f;
+  }
+  
+  .tabPaginationButton:hover {
+    padding: 5px;
+    background-color: #194b48;
+    border: 1px solid #134b48;
+    color: yellow;
+  }
+  
+  .tabPaginationButton {
+    margin: 5px;
+    padding: 5px;
+    background-color: #2b7a76;
+    border: 1px solid #134b48;
+    color: yellow;
+  }
+  
+  .tabPaginationButton:hover {
+    background-color: #1a4745;
+    border: 1px solid #3aafa9;
+    color: yellow;
+  }
+  
+  .currentTabPaginationButton {
+    background-color: #1a4745;
+  }
+  
+  .moveItem {
+    text-transform: capitalize;
+  }
+  
+  #itemDescription {
+    width: 500px;
+  }
+  
+  #itemRandomBtn {
+    color: white;
+    background-color: #2b7a78;
+    border: 1px solid #5785b1;
+  }
+  
+  #itemRandomBtn:hover {
+    background-color: #1a4745;
+    border: 1px solid #71a9df;
+  }
+  
+  #evolutionContent {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .itemEvolutionName {
+    text-transform: capitalize;
+  }
+  
+  .itemEvolutionLinkImg {
+    image-rendering: pixelated;
+  }
+
+  #itemImage {
+      display: flex;
+      flex-direction: column;
+  }
+
+  #itemCost {
+      margin: auto;
+      width: 100px;
+  }
+
+  @media screen and (max-width: 1400px) {
+    #itemDescription { width: auto;}; 
+  }
+  @media screen and (max-width: 1000px) {
+      #itemHeader {
+          flex-direction: column;
+      }
+
+      #itemImage {
+        width: 300px;
+        margin: auto;
+      }
+
+      #itemDescription {
+          width: auto;
+      }
+  }
+  

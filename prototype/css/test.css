@@ -1,0 +1,37 @@
+.grid {
+    display: flex;
+    flex-flow: row wrap; 
+    row-gap: 20px;
+    width: 100%;
+    margin: auto;
+}
+
+.grid-item {
+    background-color: red;
+    color: white;
+    display: inline-block;
+    margin: auto;
+    width: 200px;
+    height: auto;
+}
+
+.grid-item-title {
+    text-transform: capitalize;
+    text-align: center;
+}
+
+/* TODO: Try getting the image centred. Margin auto doesn't work for some reason.*/
+.grid-item-image {
+    image-rendering: pixelated;
+    width: 150px;
+    height: auto;
+    margin: auto;
+}
+
+.grid-item-hover {
+    position: absolute;
+    z-index: 1000;
+    background-color: green;
+    width: 200px;
+    height: auto;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('templates/head_common'); -%>
+    <link rel="stylesheet" href="/css/normalize.min.css" />
+    <link rel="stylesheet" href="/css/settings.css">
+    <link rel="stylesheet" href="/css/search.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    
+    <title>PokePrime - User Settings</title>
+</head>
+<body>
+    <%- include('templates/navbar'); -%>
+
+    <div class="banner" id="banner-left">
+    </div>
+
+    <div class="main-container">
+        <div class="main wrapper clearfix" id="contentContainer">
+
+            <% if (typeof(user) !== "undefined" && user !== null) { %>
+                <h1 id="settingsTitle"> <%= user.username %>'s Settings</h1>
+
+                <div id="settingsForm">
+                    <div class="updateContainer">
+                        <label for="motto">Your Description</label>
+                        <input type="text" name="motto" id="mottoInput" placeholder="Battling with my pokemon">
+                        <button id="updateMottoBtn">Update Description</button>
+                    </div>
+
+                    <div class="updateContainer">
+                        <label for="password">New Password</label>
+                        <input type="password" name="password" id="passwordInput">
+                        
+                        <label for="password">Confirm New Password</label>
+                        <input type="password" name="confirmPassword" id="confirmPasswordInput">
+
+                        <button id="updatePasswordBtn">Update Password</button>
+                    </div>
+                    
+                    <div class="updateContainer">
+                        <p>Clear Search History?</p>
+                        <button id="clearSearchHistoryBtn">Clear</button>
+                    </div>
+                </div>
+            <% } %>
+
+        </div>
+    </div>
+
+    <div class="banner" id="banner-right">   
+    </div>
+
+    <%- include('templates/footer'); -%>
+
+    <!-- JavaScript scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+        window.jQuery ||
+        document.write(
+            '<script src="js/vendor/jquery-1.11.2.min.js"><\/script>'
+        );
+    </script>
+
+    <script src="/js/searchBar.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/settings.js"></script>
+</body>

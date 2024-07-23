@@ -1,0 +1,50 @@
+<div class="header-container">
+  <header class="wrapper clearfix">
+    <nav>
+      <span id="navCont">
+        <a class="title" href="/">PokePrime</a>
+
+        <% if (typeof(user) !== "undefined" && user !== null) { %> <% } %>
+
+        <div id="searchContainer">
+          <input
+            type="text"
+            name="searchTerm"
+            id="searchInput"
+            placeholder="Search"
+            autocomplete="off"
+          />
+          <button id="searchButton">Go</button>
+        </div>
+
+        <% if (typeof(user) !== "undefined" && user !== null) { %>
+
+        <a href="/signout" id="navLink">Sign out</a>
+        <div name="userDropdown" id="userDropdown">
+          <button id="userDropdownBtn"><%= user.username %></button>
+          <div id="userDropdownContent">
+            <a
+              class="userDropdownOption"
+              href="/user/<%= user.username %>/profile"
+            >
+              Profile
+            </a>
+            <a class="userDropdownOption" href="/user/settings"> Settings </a>
+            <a class="userDropdownOption" href="/battle">Battle</a>
+            <a class="userDropdownOption" href="/leaderboard">Leaderboard</a>
+          </div>
+        </div>
+
+        <% } else { %>
+
+        <a href="/signup" id="signinLink">Sign up</a>
+
+        <a href="/signin" id="signupLink">Sign in</a>
+
+        <% } %>
+      </span>
+
+      <ul id="mobileMenu"></ul>
+    </nav>
+  </header>
+</div>

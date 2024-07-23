@@ -1,0 +1,22 @@
+#erorheading{
+
+    color: white;
+
+}
+
+.errorcontainer{
+    width: 18rem;
+    margin: auto;
+}
+
+#errordesc{
+
+ color:white;
+
+}
+
+#errorimage{
+    margin: auto;
+    width: 400px;
+   
+}

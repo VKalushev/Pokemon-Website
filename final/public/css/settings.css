@@ -1,0 +1,64 @@
+#settingsTitle {
+    text-align: center;
+    color: yellow;
+    text-transform: capitalize;
+}
+
+#settingsForm {
+    margin: auto;
+    width: 50%; 
+    color: yellow;
+    padding-bottom: 50px;
+}
+ 
+
+ #settingsForm label, #settingsForm p { 
+    text-align: center;
+    display: block;
+    color: yellow;
+    width: 100%;
+}
+
+#settingsForm input {
+    display: block;
+    width: 100%;
+    border: 2px solid #107570;
+    background-color: #1c9791;
+    border-radius: 1rem;
+    color: yellow;
+    margin-bottom: .5rem;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+#settingsForm input::placeholder {
+    color: rgb(219, 219, 148);
+}
+
+#settingsForm button {
+    padding: 0.2rem;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    height: 30px;
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    background-color: #2b7a78;
+    color: yellow;
+    font-weight: 300;
+    margin: auto;
+    transition: all 0.2s;
+}
+
+#settingsForm button:hover {
+    background-color: #104d4a;
+}
+
+.updateContainer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5rem;
+}

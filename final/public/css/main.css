@@ -1,0 +1,321 @@
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: "PT Serif", serif;
+}
+
+body {
+  opacity: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#searchInput::placeholder {
+  color: yellow;
+}
+
+@media screen and (min-width: 1201px) {
+  .banner {
+    display: inline;
+    width: 15%;
+  }
+
+  .main-container {
+    width: 70%;
+    height: 40rem;
+    background-color: #3aafa9;
+    overflow-y: auto;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .banner {
+    display: none;
+  }
+
+  .main-container {
+    width: 100%;
+    background-color: #3aafa9;
+    overflow-y: auto;
+  }
+}
+
+/* new nav*/
+nav{
+  column-gap: 2rem;
+  justify-content: center;
+  padding-bottom: .5rem;
+  display: flex;
+  width: 100vw;
+  height: 4rem;
+  background-color: #2b7a76;
+}
+
+nav > *{
+  margin-top: 1rem;
+}
+
+/* Nav bar position */
+#mobileMenu {
+  display: none;
+}
+/* user drop down */
+#userDropdown {
+  margin-left: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+#userDropdownBtn {
+  border: none;
+  font-size: 24px;
+  background-color: transparent;
+  color: yellow;
+  padding: 0.2rem;
+}
+
+#userDropdownContent {
+  border: 0.1rem solid yellow;
+  padding: 0.2rem;
+  font-size: 18px;
+  position: absolute;
+  display: none;
+  z-index: 1;
+  color: yellow;
+  background-color: #3aafa9;
+}
+
+.userDropdownOption {
+  margin: 0.75rem;
+  text-decoration: none;
+  border: none;
+  margin-bottom: 0.2rem;
+  background-color: #3aafa9;
+  color: yellow;
+}
+
+.userDropdownOption:hover{
+  color: #2b7a78;
+}
+
+#userDropdown:hover #userDropdownContent {
+  
+  display: block;
+}
+
+
+/* Signin / Signup */
+#signinLink {
+  margin-top: .4rem;
+  margin-left: 2rem;
+  font-size: 21px;
+  color: yellow;
+  text-decoration: none;
+}
+
+#signupLink {
+  margin-top: .4rem;
+  margin-left: 2rem;
+  font-size: 21px;
+  color: yellow;
+  text-decoration: none;
+}
+
+#searchInput {
+  color: yellow;
+  background-color: #3aafa9;
+  border: 0.5px solid yellow;
+  width: 25rem;
+  height: 2rem;
+  font-size: 20px;
+  padding-left: 0.5rem;
+  border-radius: 2rem;
+}
+
+#searchInput:focus{
+  outline : none;
+}
+
+#searchButton {
+  background-color: #3aafa9;
+  color: yellow;
+  border: 0.5px solid yellow;
+  height: 2.3rem;
+  width: 4rem;
+  border-radius: 2rem;
+}
+
+#searchInputMobile,
+#searchButtonMobile {
+  display: none;
+}
+
+
+
+#hamburgerMenuBtn {
+  display: none;
+}
+
+/* Hover elements for searchbar*/
+
+#signupLink:hover {
+  color: rgb(136, 136, 0);
+}
+
+#signinLink:hover {
+  color: rgb(136, 136, 0);
+}
+
+#searchButton:hover {
+  border: #b469c9;
+  color: #2b7a76;
+}
+
+#searchButtonMobile {
+  background-color: #3aafa9;
+  border: 0.5px solid yellow;
+  color: yellow;
+  height: 2rem;
+  width: 4rem;
+  border-radius: 2rem;
+}
+
+#navLink {
+  margin-top: .4rem;
+  margin-left: 2rem;
+  color: yellow;
+  text-decoration: none;
+  font-size: 21px;
+}
+
+/* Title */
+.title {
+  margin-top: -.5rem;
+  font-size: 40px;
+  font-family: fantasy;
+  color: yellow;
+}
+
+@media screen and (max-width: 969px) {
+
+  nav {
+    column-gap: 2rem;
+    justify-content: flex-start;
+    padding-bottom: 1rem;
+    display: flex;
+    width: 100vw;
+    height: 4rem;
+    background-color: #2b7a76;
+    color: yellow;
+    list-style-type: none;
+  }
+
+  .title {
+    font-size: 28px;
+    padding: 0;
+    margin-left: 40vw;
+    margin-top: -3.5rem;
+    font-family: fantasy;
+    color: yellow;
+  }
+
+  #hamburgerMenuBtn {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    background-color: #3aafa9;
+    border: none;
+    color: yellow
+  }
+
+  #navCont {
+    display: block;
+    top: 3rem;
+    position: absolute;
+    flex-direction: column;
+    background-color: #2b7a78;
+    width: 100%;
+    padding-bottom: 3rem;
+    z-index: 1000;
+    border: .1rem solid yellow;
+  }
+
+  #navCont > * {
+    margin-top: 1rem;
+    display: block;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 949px) {
+  #navSearchMobile {
+    margin-top: 1.5rem;
+    margin-left: 20%;
+  }
+}
+
+/* New footer tags */
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #2b7a78;
+  width: 100vw;
+  height: 2.5vw;
+  padding-top: 40px;
+  color: yellow;
+}
+
+.footer-content {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  text-align: center;
+}
+
+.footer-content p {
+  max-width: 500px;
+  margin: 10px auto;
+  line-height: 28px;
+  font-size: 14px;
+}
+
+.socials {
+  margin: 0 10px;
+  text-decoration: none;
+  color: yellow;
+}
+
+.socials i {
+  font-size: 1.1rem;
+  transition: color 0.5s ease;
+}
+
+.socials:hover i {
+  color: brown;
+}
+
+@media screen and (max-width: 600px) {
+  .footer {
+    display: none;
+  }
+}
+
+.scrollBarHeading {
+  color: yellow;
+  position: absolute;
+  /* margin-left: 46%; */
+  margin-top: -3px;
+  text-transform: uppercase;
+}
+
+/* Dynamic Banner */
+
+#banner-left,
+#banner-right {
+  background-color: transparent;
+}

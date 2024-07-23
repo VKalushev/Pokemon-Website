@@ -1,0 +1,169 @@
+/* Whole grid */
+
+.grid-item:hover {
+  border-radius: 10px;
+  background-color: #256f6b;
+}
+
+.grid {
+  background: linear-gradient(to left, #17252a, #2b7a78, #17252a);
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  margin: auto;
+}
+
+/* The lightblue box */
+.grid-item {
+  border-radius: 25px;
+  background-color: #3aafa9;
+  color: white;
+  display: inline-block;
+  margin: auto;
+  border-style: none;
+  padding-top: 50px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  /* margin-right: 20px; */
+  /* padding-left: 20px; */
+}
+
+/* Image */
+.grid-item-image {
+  image-rendering: pixelated;
+  height: auto;
+  margin-top: -40px;
+  z-index: 5;
+  /* width: 175px; */
+}
+
+/* Arrows CSS (Buttons)*/
+.arrow {
+  background-color: transparent;
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border: none;
+  z-index: 6;
+  /* height: 80px; */
+  /* border: 20px solid #32557f; */
+  /* border-left: 0; */
+  /* border-top: 0; */
+  /* z-index: 2000; */
+}
+/* @media screen and (min-width: 1700px) {
+  .arrow-right {margin-left: 6.8%; margin-top: 1%;}
+  .arrow-left {margin-left: -19px; margin-top: 1%;}
+} */
+
+@media screen and (min-width: 1700px) {
+  .arrow-right {
+    margin-left: 66.8%;
+    margin-top: 4.5%;
+  }
+  .arrow-left {
+    margin-left: -19px;
+    margin-top: 4.5%;
+  }
+}
+
+@media screen and (max-width: 1700px) {
+  .arrow-right {
+    margin-left: 66.2%;
+    margin-top: 5%;
+  }
+  .arrow-left {
+    margin-left: -19px;
+    margin-top: 5%;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .arrow-right {
+    margin-left: 66.8%;
+    margin-top: 6%;
+  }
+  .arrow-left {
+    margin-left: -19px;
+    margin-top: 6%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .grid-item-image {
+    width: 150px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .arrow-right {
+    margin-left: 94.8%;
+    margin-top: 11%;
+  }
+  .arrow-left {
+    margin-left: -19px;
+    margin-top: 11%;
+  }
+  .grid-item-image {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .arrow-right {
+    margin-left: 93.8%;
+    margin-top: 11.5%;
+  }
+  .arrow-left {
+    margin-left: -19px;
+    margin-top: 11.5%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .arrow-right {
+    margin-left: 90.5%;
+    margin-top: 15%;
+  }
+  .arrow-left {
+    margin-left: -19px;
+    margin-top: 15%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .arrow-right {
+    margin-left: 89.3%;
+    margin-top: 20%;
+  }
+  .arrow-left {
+    margin-left: -17px;
+    margin-top: 20%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .arrow-right {
+    margin-left: 70.8%;
+    margin-top: 20%;
+  }
+  .arrow-left {
+    margin-left: -19px;
+    margin-top: 20%;
+  }
+}
+
+/* .arrow-right { 
+  margin-left: 66.8%;
+  transform: rotate(320deg);
+  }
+.arrow-left { 
+  margin-left: -19px;
+  transform: rotate(140deg); 
+  } */
+
+.icon {
+  color: yellow;
+  width: 100%;
+  height: 100%;
+}

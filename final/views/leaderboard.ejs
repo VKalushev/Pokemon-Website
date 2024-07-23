@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('templates/head_common'); -%>
+    <link rel="stylesheet" href="/css/normalize.min.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/search.css" />
+    <link rel="stylesheet" href="/css/leaderboard.css" />
+    <title>PokePrime - Leaderboard</title>
+    <style></style>
+  </head>
+  <body>
+    <%- include('templates/navbar'); -%>
+
+    <div class="banner" id="banner-left"></div>
+
+    <div class="main-container">
+      <div class="main wrapper clearfix" id="contentContainer">
+        <div class="Leaderboardtext"><h1>Leaderboard</h1></div>
+        <table>
+          <tr>
+            <th class="userRanks">№</th>
+            <th class="userNames">Username</th>
+            <th class="userWRration">W/L</th>
+            <th class="userRankPoints">Rank Points</th>
+          </tr>
+
+          <!-- If statement making sure that our leadeboard variable is not empty and if it is not printing the avaiable users 
+          and their ranking informationg -->
+          <% if (leaderboard !== null) { %> <% for (let i=0; i < 10; i++) { %>
+          <% if (i < leaderboard.length) { %>
+          <tr>
+            <th class="userRanks"><%= i+ 1 %></th>
+            <th class="userNames">
+              <a
+                class="userlink"
+                href="/user/<%= leaderboard[i].username %>/profile"
+                ><%= leaderboard[i].username %></a
+              >
+            </th>
+            <th class="userWRration">
+              <%= leaderboard[i].wins %> / <%= leaderboard[i].loses %>
+            </th>
+            <th class="userRankPoints"><%= leaderboard[i].rankpoints %></th>
+          </tr>
+          <% } else {%> 
+          <tr>
+            <th class="userRanks"><%= i+ 1%></th>
+            <th class="userNames">-</th>
+            <th class="userWRration">-</th>
+            <th class="userRankPoints">-</th>
+          </tr>
+          <% } %> <% } %> <% } %>
+          <% if (typeof(result) !== "undefined" && user !== null) { %>
+            <!-- Showing the ranking information of the user in case he is not top 10 -->
+          <tr class = "myLeaderboardResults">
+
+            <th>-</th>
+            <th>
+              <a class="userlink" href="/user/<%= result.username %>/profile"
+                ><%= result.username %></a
+              >
+            </th>
+            <th><%= result.wins %> / <%= result.loses %></th>
+            <th><%= result.rankpoints %></th>
+          </tr>
+          <% } %>
+        </table>
+      </div>
+    </div>
+
+    <div class="banner" id="banner-right"></div>
+
+    <%- include('templates/footer'); -%>
+
+    <!-- JavaScript scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+      window.jQuery ||
+        document.write(
+          '<script src="js/vendor/jquery-1.11.2.min.js"><\/script>'
+        );
+    </script>
+    <script src="js/pokemon.js"></script>
+    <script src="js/searchBar.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
